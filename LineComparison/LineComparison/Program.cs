@@ -31,48 +31,13 @@ namespace LineComparison
             double lengthofLine = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
             return lengthofLine;
         }
-        public static String compareTo(double l1, double l2)
-        {
-            if (l1 == l2)
-            {
-                return "Line1 and Line2 are Equal.";
-            }
-            else
-            {
-                if (l1 > l2)
-                {
-                    return "Line 1 is Bigger Than Line 2";
-                }
-                else
-                {
-                    return "Line 1 is Smaller Than Line 2";
-                }
-            }
-        }
 
         public static void Main(String[] args)
         {
-
-            LineComparisonProgram LC1 = new LineComparisonProgram();
-            LineComparisonProgram LC2 = new LineComparisonProgram();
-
-            //Getting Line Point from User Input
-            LC1.getLinePoint();
-            LC2.getLinePoint();
-
-            //Getting Length of Lines in Variables
-            double line1Length = LC1.getLengthOfLine();
-            double line2Length = LC2.getLengthOfLine();
-
-
-            //Displaying the Length of Lines
-            Console.WriteLine("Length of Line1 : " + line1Length);
-            Console.WriteLine("Length of Line2 : " + line2Length);
-
-            //Checking the Equality or Smaller Length of Lines
-            Console.WriteLine(compareTo(line1Length, line2Length));
-
-
+            //Object of LineComaprison Class for Calculating Length of Lines
+            LineComparisonProgram LC = new LineComparisonProgram();
+            LC.getLinePoint();
+            Console.WriteLine("Length of Lines : " + LC.getLengthOfLine());
         }
 
     }
