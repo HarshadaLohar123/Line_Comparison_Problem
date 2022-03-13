@@ -35,10 +35,30 @@ namespace LineComparison
         public static void Main(String[] args)
         {
 
-            //Object of LineComaprison Class for Calculating Length of Lines
-            LineComparisonProgram LC = new LineComparisonProgram();
-            LC.getLinePoint();
-            Console.WriteLine("Length of Lines : " + LC.getLengthOfLine());
+            LineComparisonProgram LC1 = new LineComparisonProgram();
+            LineComparisonProgram LC2 = new LineComparisonProgram();
+
+            //Getting Lines input from user
+            LC1.getLinePoint();
+            LC2.getLinePoint();
+
+            //Storing Length of Lines in Local Variables
+            double line1Length = LC1.getLengthOfLine();
+            double line2Length = LC2.getLengthOfLine();
+
+            //Displaying the Length of Lines
+            Console.WriteLine("Length of Line1 : " + line1Length);
+            Console.WriteLine("Length of Line2 : " + line2Length);
+
+            //Checking the Equality of Lines
+            if (line1Length == line2Length)
+            {
+                Console.WriteLine("Length of Line1 and Line2 are Equal");
+            }
+            else
+            {
+                Console.WriteLine("Length of Line1 and Line2 are Not Equal");
+            }
         }
 
     }
